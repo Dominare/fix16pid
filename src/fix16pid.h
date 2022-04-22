@@ -3,6 +3,17 @@
 
 #include "fix16.h"
 
+#define PID_KP 	F16C(1,0)
+#define PID_KI	F16C(0,0)
+#define PID_KD	F16C(0,0)
+#define PID_TAU	F16C(0,0)
+#define PID_LIM_MIN F16C(0,0) 
+#define PID_LIM_MAX F16C(329,0)
+#define PID_LIM_MIN_INT F16C(-60,0)
+#define PID_LIM_MAX_INT	F16C(60,0)	
+#define SAMPLE_TIME_S F16C(0,1667) //ADC timer period
+
+
 typedef struct {
 
 	// Controller gains 
